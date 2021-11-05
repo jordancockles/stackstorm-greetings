@@ -14,10 +14,10 @@ class HelloSensor(Sensor):
     def run(self):
         while not self._stop:
             self._logger.debug("HelloSensor dispatching trigger...")
-            count = self.sensor_service.get_value("hello_st2.count") or 0
+            count = self.sensor_service.get_value("hello_world.count") or 0
             payload = {"greeting": "Yo, StackStorm!", "count": int(count) + 1}
-            self.sensor_service.dispatch(trigger="hello_st2.event1", payload=payload)
-            self.sensor_service.set_value("hello_st2.count", payload["count"])
+            self.sensor_service.dispatch(trigger="hello_world.event1", payload=payload)
+            self.sensor_service.set_value("hello_world.count", payload["count"])
             eventlet.sleep(60)
 
     def cleanup(self):
@@ -32,4 +32,3 @@ class HelloSensor(Sensor):
 
     def remove_trigger(self, trigger):
         pass
-    
