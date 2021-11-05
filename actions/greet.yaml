@@ -1,0 +1,14 @@
+---
+name: greet
+pack: hello_world
+runner_type: local-shell-script
+description: Greet StackStorm!
+enabled: true
+entry_point: greet.sh
+paramaters:
+  greeting:
+    type: string
+    description: Greeting you want to say to StackStorm (i.e. Hello, Hi, Yo, etc)
+    required: true
+    position: 1
+    

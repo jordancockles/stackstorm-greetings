@@ -1,0 +1,12 @@
+ref: hello_world
+name: Hello World
+description: Pack for testing project based pack development
+keywords:
+    - hello_world
+version: 0.0.1
+python_versions:
+    - "2"
+    - "3"
+dependencies:
+    - core
+author: Jordan Cockles

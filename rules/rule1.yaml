@@ -1,0 +1,11 @@
+---
+name: on_hello_event1
+pack: hello_world
+description: Sample rule firing on hello_world.event1.
+enabled: true
+trigger:
+    type: hello_world.event1
+action:
+    ref: hello_world.greet
+    parameters:
+        greeting: Yo

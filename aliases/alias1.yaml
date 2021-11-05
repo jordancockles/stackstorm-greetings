@@ -1,0 +1,8 @@
+---
+name: greet
+pack: hello_world
+description: "Greet StackStorm"
+action_ref: "hello_world.greet"
+formats:
+  - "greet {{greeting}}"
+  
